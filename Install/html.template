@@ -1,0 +1,44 @@
+[Format]
+timeformat=MMMM dd, yyyy H:mm:ss zzz
+identchar=\n
+identcount=2
+ignorehidden=true
+ignoresystem=true
+
+[ExcludeFiles]
+*.ico, *.js
+
+[ExcludeFolders]
+.vs, .svn
+
+[FileTypes]
+audio=mp3, aac, mpa, wav
+video=avi, mkv, mp4, mpeg
+text=txt, doc, srt, sub
+pic=jpg, png, tiff, gif
+
+[Header]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FileScan ({%scandate%})</title>
+</head>
+<body>
+<h1>FileScan</h1>
+<p class="info">Volume: <strong>{%volumelabel%} ({%filesystem%})</strong><br />Date: <strong>{%scandate%}</strong><br />Details: It took <strong>{%elapsed%}</strong> to scan <strong>{%itemcount%}</strong> items (<strong>{%foldercount%}</strong> folders and <strong>{%filecount%}</strong> files)<br /></p>
+<div class="content">
+
+[Footer]
+</div>
+</body>
+</html>
+
+[FileItem]
+<div class="file {%type%}"><p title="{%path%}">{%name%} - <small>{%size%}</small></p></div>
+
+[DirectoryItem]
+<div class="folder">
+	<p title="{%path%}"><strong>{%name%}</strong> ({%itemcount%}) - <small>{%size%}</small></p>
+[DirectoryItemFooter]
+</div>

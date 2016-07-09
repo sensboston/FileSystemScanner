@@ -1,0 +1,47 @@
+[Format]
+timeformat=MMMM dd, yyyy H:mm:ss zzz
+identchar=\n
+identcount=2
+ignorehidden=true
+ignoresystem=true
+
+[ExcludeFiles]
+*.png, *.js
+
+[ExcludeFolders]
+.vs, .svn
+
+[FileTypes]
+audio=mp3, aac, mpa, wav
+video=avi, mkv, mp4, mpeg 
+text=txt, doc, srt, sub
+pic=jpg, png, tiff, gif
+
+[Header]
+<?xml version="1.0"?>
+<scan date="{%scandate%}" elapsed="{%elapsed%}" volume_label="{%volumelabel%}" file_system="{%filesystem%}">
+<items>{%itemcount%}</items>
+<folders>{%foldercount%}</folders>
+<files>{%filecount%}</files>
+
+[Footer]
+</scan>
+
+[FileItem]
+<file>
+	<name>{%name%}</name>
+	<path>{%path%}</path>
+	<size>{%size%}</size>
+	<type>{%type%}</type>
+</file>
+
+[DirectoryItem]
+<directory>
+	<name>{%name%}</name>
+	<path>{%path%}</path>
+	<size>{%size%}</size>
+	<items>{%itemcount%}</items>
+	<size>{%size%}</size>
+	<bytes>{%bytesize%}</bytes>
+[DirectoryItemFooter]
+</directory>

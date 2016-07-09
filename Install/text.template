@@ -1,0 +1,53 @@
+[Format]
+timeformat=MMMM dd, yyyy H:mm:ss zzz
+identchar=\n
+identcount=1
+ignorehidden=true
+ignoresystem=true
+
+[ExcludeFiles]
+*.ico, *.js
+
+[ExcludeFolders]
+.vs, .svn
+
+[Header]
+Scan time (sec): {%elapsed%}
+Directory scanned: {%scandate%}
+Volume label: {%volumelabel%}
+File system: {%filesystem%}
+Total items found: {%itemcount%}
+Folders found: {%foldercount%}
+Files found: {%filecount%}
+
+*********************************************
+
+[FileTypes]
+audio=mp3, aac, mpa, wav
+video=avi, mkv, mp4, mpeg 
+text=txt, doc, srt, sub
+pic=jpg, png, tiff, gif
+
+[FileItem]
+File name: {%name%}
+Located at: {%path%}
+Size: {%size%}
+Size in bytes: {%bytesize%}
+File ext: {%extension%}
+{%type%}
+---------------------------------------------
+
+[DirectoryItem]
+This is a folder {%name%}
+Located at: {%path%}
+Items in folder: {%itemcount%}
+Total folder size is: {%size%}
+Total folder size in bytes: {%bytesize%}
+=============================================
+
+[DirectoryItemFooter]
+
+[Footer]
+
+Thats all folks!
+*********************************************
